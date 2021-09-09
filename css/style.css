@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+:root {
+    --color: rgba(145, 145, 145, 0.699);
+    --color-hover: rgb(46, 81, 97);
+}
+
+/*HEADER*/
+
+.capa {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.089);
+    z-index: -100;
+}
+
+.header1 {
+    display: block;
+    width: 98%;
+    height: 100px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: var(--color);
+    box-shadow: 0 0 5px 2px black;
+    border-radius: 0 0 10px 50px;
+    z-index: 500;
+}
+
+.header1 .logo {
+    display: block;
+    width: 70px;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.header1 ul {
+    display: flex;
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header1 ul li {
+    display: grid;
+    place-content: center;
+    margin-right: 30px;
+}
+
+.header1 ul a {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.header1 ul a:hover {
+    background: var(--color-hover);
+}
+
+.header2 {
+    display: none;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    background-color: var(--color);
+    box-shadow: 0 0 5px 2px black;
+    border-radius: 0 0 10px 50px;
+    z-index: 500;
+}
+
+.header2 .logo {
+    display: block;
+    width: 70px;
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.header2 .menu {
+    display: block;
+    width: 50px;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 500;
+}
+
+.header2 ul {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    background: grey;
+    transform: translateX(-100%);
+    transition: all .3s;
+    padding-top: 100px;
+}
+
+.header2 ul li {
+    display: grid;
+    place-content: center;
+    margin-bottom: 30px;
+}
+
+.header2 ul a {
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.header2 ul a:hover {
+    background: var(--color-hover);
+}
+
+/*SECTION*/
+.presentacion{
+    display: block;
+    margin: 0 auto;
+    width: 99%;
+    height: 650px;
+    position: relative;
+    transform: translateY(4px);
+    overflow: hidden;
+}
+.presentacion img{
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0 0 10px 10px;
+}
+.presentacion .titulo{
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all .5s;
+}
+.presentacion .sobretitulo{
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.vista{
+    display: grid;
+    place-content: center;
+    width: 92%;
+    height: 450px;
+    transform:translateY(-100px);
+    margin: 0 auto;
+    background: #fff;
+    text-align: center;
+    grid-template-columns: 350px 350px auto;
+}
+
+.vista .tarjeta{
+    display: inline-block;
+    width: 300px;
+    height: auto;
+    margin-top: -50px;
+}
+.vista .tarjeta .circulo{
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--color-hover);
+}
+
+.vista .tarjeta .nombre{
+    color: rgb(71, 71, 71);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px;
+}
+.vista .tarjeta .desc{
+    color: rgb(88, 88, 88);
+    font-size: 16px;
+    font-weight: lighter;
+    margin: 15px;
+}
+
+
+@media screen and (max-width:1150px){
+    .vista{
+        grid-template-columns: none;
+        grid-template-rows: 35% 35% auto;
+        height: auto;
+        padding: 50px 0;
+    }
+    .vista .tarjeta{
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:730px) {
+    .header1 {
+        display: none;
+    }
+    .header2 {
+        display: block;
+    }
+}
