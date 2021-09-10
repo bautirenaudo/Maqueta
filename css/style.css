@@ -241,18 +241,21 @@ footer .titulo-footer{
 footer .redes{
     display: grid;
     place-content: center;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     margin: 0 auto;
-    grid-template-columns: 70px 70px 70px 70px 70px;
+    grid-template-columns: 65px 65px 65px 65px auto;
 }
 footer .redes-cuadro{
     display: grid;
     place-content: center;
-    width: 60px;
-    height: 60px;
-    font-size: 12px;
-    padding-top: 50px;
+    width: 55px;
+    height: 55px;
+    font-size: 13px;
     border: .5px solid rgb(99, 99, 99);
+}
+footer .redes-cuadro span{
+
 }
 footer p{
     display: block;
