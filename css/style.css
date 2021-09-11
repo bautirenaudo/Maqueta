@@ -8,7 +8,7 @@
 
 :root {
     --color: rgba(145, 145, 145, 0.699);
-    --color-hover: rgb(46, 81, 97);
+    --color-hover: rgb(21, 95, 129);
 }
 
 /*HEADER*/
@@ -138,7 +138,8 @@
 }
 
 /*SECTION*/
-.presentacion{
+
+.presentacion {
     display: block;
     margin: 0 auto;
     width: 99.5%;
@@ -147,7 +148,8 @@
     transform: translateY(4px);
     overflow: hidden;
 }
-.presentacion img{
+
+.presentacion img {
     display: block;
     margin: 0 auto;
     height: 100%;
@@ -155,7 +157,8 @@
     object-fit: cover;
     border-radius: 0 0 10px 10px;
 }
-.presentacion .titulo{
+
+.presentacion .titulo {
     display: block;
     width: 100%;
     position: absolute;
@@ -168,7 +171,8 @@
     font-family: 'Times New Roman', Times, serif;
     transition: all .5s;
 }
-.presentacion .sobretitulo{
+
+.presentacion .sobretitulo {
     display: block;
     width: 100%;
     position: absolute;
@@ -180,27 +184,30 @@
     font-weight: lighter;
 }
 
-.vista{
+.vista {
     display: grid;
     place-content: center;
     width: 92%;
     max-width: 1400px;
     height: 450px;
-    transform:translateY(-100px);
+    transform: translateY(-100px);
     margin: 0 auto;
     background: rgb(235, 235, 235);
     text-align: center;
     grid-template-columns: 350px 350px auto;
+    border-radius: 0 0 30px 0;
 }
 
-.vista .tarjeta{
+.vista .tarjeta {
     display: inline-block;
     width: 300px;
     height: auto;
     margin-top: -50px;
 }
-.vista .tarjeta .circulo{
-    display: block;
+
+.vista .tarjeta .circulo {
+    display: grid;
+    place-content: center;
     margin: 0 auto;
     width: 55px;
     height: 55px;
@@ -208,29 +215,35 @@
     background: var(--color-hover);
 }
 
-.vista .tarjeta .nombre{
+.vista .tarjeta .circulo span {
+    font-size: 20px;
+}
+
+.vista .tarjeta .nombre {
     color: rgb(71, 71, 71);
     font-size: 19px;
     font-weight: bold;
     margin: 15px;
 }
-.vista .tarjeta .desc{
+
+.vista .tarjeta .desc {
     color: rgb(88, 88, 88);
     font-size: 16px;
     font-weight: lighter;
     margin: 15px;
 }
 
-
 /*FOOTER*/
-footer{
+
+footer {
     display: block;
     width: 100%;
     height: 380px;
     background-color: #222;
     padding: 100px 0;
 }
-footer .titulo-footer{
+
+footer .titulo-footer {
     display: block;
     width: 100%;
     text-align: center;
@@ -238,7 +251,8 @@ footer .titulo-footer{
     margin-bottom: 20px;
     font-weight: lighter;
 }
-footer .redes{
+
+footer .redes {
     display: grid;
     place-content: center;
     width: 100%;
@@ -246,33 +260,34 @@ footer .redes{
     margin: 0 auto;
     grid-template-columns: 65px 65px 65px 65px auto;
 }
-footer .redes-cuadro{
+
+footer .redes-cuadro {
     display: grid;
     place-content: center;
     width: 55px;
     height: 55px;
     font-size: 13px;
-    border: .5px solid rgb(99, 99, 99);
+    border: 1px solid rgb(51, 51, 51);
+    text-decoration: none;
 }
-footer .redes-cuadro span{
 
-}
-footer p{
+footer .redes-cuadro span {}
+
+footer p {
     display: block;
     text-align: center;
     margin-top: 50px;
     color: rgb(160, 160, 160);
 }
 
-
-@media screen and (max-width:1150px){
-    .vista{
+@media screen and (max-width:1150px) {
+    .vista {
         grid-template-columns: none;
         grid-template-rows: 35% 35% auto;
         height: auto;
         padding: 50px 0;
     }
-    .vista .tarjeta{
+    .vista .tarjeta {
         margin: 0 auto;
         width: 90%;
     }
