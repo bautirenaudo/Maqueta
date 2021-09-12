@@ -344,17 +344,17 @@
     margin: 0 auto;
     margin-bottom: 80px;
     padding: 20px 0;
-    width: 90%;
+    width: 99%;
     max-width: 900px;
     gap: 15px;
-    grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
 }
 .productos .producto{
     display: block;
     position: relative;
     margin: 0 auto;
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 350px;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
