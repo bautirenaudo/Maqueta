@@ -233,6 +233,57 @@
     margin: 15px;
 }
 
+.contenedor-foto{
+    display: block;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    margin-bottom: 50px;
+}
+.contenedor-foto::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.699);
+}
+.contenedor-foto .img-fondo{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contenedor-foto .opinion{
+    display: block;
+    position: absolute;
+    width: 100%;
+    max-width: 750px;
+    height: 300px;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 20px;
+}
+.contenedor-foto .opinion img{
+    display: block;
+    width: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.contenedor-foto .opinion p{
+    display: block;
+    width: 100%;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.contenedor-foto .opinion .client-name{
+    display: block;
+    font-size: 19px;
+    color: rgb(87, 165, 238);
+    font-weight: bold;
+}
+
 /*FOOTER*/
 
 footer {
