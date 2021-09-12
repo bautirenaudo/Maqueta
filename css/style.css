@@ -192,10 +192,11 @@
     height: 450px;
     transform: translateY(-100px);
     margin: 0 auto;
-    background: rgb(235, 235, 235);
+    background: rgb(250, 250, 250);
     text-align: center;
     grid-template-columns: 350px 350px auto;
     border-radius: 0 0 30px 0;
+    margin-bottom: -50px;
 }
 
 .vista .tarjeta {
@@ -233,14 +234,16 @@
     margin: 15px;
 }
 
-.contenedor-foto{
+.contenedor-foto {
     display: block;
     width: 100%;
+    margin: 0 auto;
     height: 550px;
     position: relative;
     margin-bottom: 50px;
 }
-.contenedor-foto::before{
+
+.contenedor-foto::before {
     content: "";
     display: block;
     position: absolute;
@@ -248,39 +251,82 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.699);
 }
-.contenedor-foto .img-fondo{
+
+.contenedor-foto .img-fondo {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.contenedor-foto .opinion{
+.contenedor-foto .clientes{
+    display: block;
+    overflow: visible;
+}
+
+
+.contenedor-foto .opinion {
     display: block;
     position: absolute;
     width: 100%;
+    height: 400px;
     max-width: 750px;
-    height: 300px;
-    top: 30%;
+    top: 70px;
     left: 50%;
     transform: translateX(-50%);
     padding: 0 20px;
 }
-.contenedor-foto .opinion img{
+
+.contenedor-foto .opinion img {
     display: block;
     width: 60px;
     border-radius: 50%;
     margin-bottom: 20px;
 }
-.contenedor-foto .opinion p{
+
+.contenedor-foto .opinion p {
     display: block;
     width: 100%;
     font-size: 17px;
     margin-bottom: 20px;
 }
-.contenedor-foto .opinion .client-name{
+
+.contenedor-foto .opinion .client-name {
     display: block;
     font-size: 19px;
     color: rgb(87, 165, 238);
+    font-weight: bold;
+}
+
+.contenedor-foto .opinion .flechas {
+    display: inline-block;
+    position: relative;
+    place-content: center;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    margin-top: 40px;
+    background: #333;
+    transition: all .2s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contenedor-foto .opinion .flechas:hover {
+    background: rgb(56, 136, 255);
+}
+
+.contenedor-foto .opinion .flechas:hover span {
+    color: #333;
+}
+
+.contenedor-foto .opinion .flechas span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(56, 136, 255);
+    font-size: 23px;
     font-weight: bold;
 }
 
