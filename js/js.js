@@ -13,5 +13,10 @@
         }
 
     })
+    ul.addEventListener("click", () => {
+        ul.style.cssText = "transform:translateX(-100%)";
+        indiceMenu = 0;
+    })
+
 
 }())
