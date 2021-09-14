@@ -1,6 +1,7 @@
 (function () {
     const menu = document.getElementById("menu");
     const ul = document.getElementById("ul");
+    const lineaAnimada=document.getElementById("linea-animada");
 
     let indiceMenu = 0;
     menu.addEventListener("click", () => {

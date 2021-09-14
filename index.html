@@ -22,9 +22,9 @@
                 <img class="logo" src="images/logo.png" alt="">
                 <ul>
                     <li><a href="">Home</a></li>
-                    <li><a href="#About">About</a></li>
                     <li><a href="#Services">Services</a></li>
                     <li><a href="#Products">Products</a></li>
+                    <li><a href="#About">About</a></li>
                     <li><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
@@ -35,9 +35,9 @@
                 <img id="menu" class="menu" src="images/menu.svg" alt="">
                 <ul id="ul">
                     <li><a href="">Home</a></li>
-                    <li><a href="#About">About</a></li>
                     <li><a href="#Services">Services</a></li>
                     <li><a href="#Products">Products</a></li>
+                    <li><a href="#About">About</a></li>
                     <li><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
@@ -47,9 +47,10 @@
             <div class="presentacion">
                 <img src="images/local.jpg" alt="">
                 <div class="titulo">MALDITO BLACK</div>
-                <div class="sobretitulo" id="Services">Haciendo historia</div>
+                <div class="sobretitulo">Haciendo historia</div>
             </div>
             <div class="vista">
+                <div class="indice-menu" id="Services"></div>
                 <div class="tarjeta">
                     <div class="circulo"><span class="icon-cart"></span></div>
                     <div class="nombre">PRUEBA DE PAGINA</div>
@@ -71,7 +72,8 @@
                 <div class="tarjeta">
                     <div class="circulo"><span class="icon-cart"></span></div>
                     <div class="nombre">PRUEBA DE PAGINA</div>
-                    <div class="desc" id="Products">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus perferendis
+                    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                        perferendis
                         commodi nemo ad necessitatibus sit inventore minus porro impedit vero ratione iste officia
                         distinctio dolorem soluta, nam eius. Iste corporis ullam praesentium tempore, soluta modi magnam
                         temporibus optio! Mollitia, obcaecati aspernatur! Provident, molestias rerum inventore maxime
@@ -79,7 +81,8 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="section-productos">
+            <div class="indice-menu" id="Products"></div>
             <h2 class="titulo-productos">Some of our Products</h2>
             <div class="productos">
                 <div class="producto">
@@ -110,25 +113,26 @@
                 <div class="producto">
                     <img src="images/gorra1.png" alt="">
                     <div class="precio">$27.50</div>
-                    <div class="nombre-producto" id="About">Gorra</div>
+                    <div class="nombre-producto">Gorra</div>
                 </div>
 
-                
+
             </div>
         </section>
         <section>
             <div class="contenedor-foto">
+                <div class="indice-menu" id="About"></div>
                 <img class="img-fondo" src="images/modelo-3.jpg" alt="">
                 <div class="opinion">
                     <div class="clientes" id="clientes">
                         <div class="cliente cliente-1">
                             <img src="images/cara.jpg" alt="">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis, laborum itaque
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis, laborum itaque
                                 fugiat,
                                 molestias vel quae eligendi blanditiis voluptatum autem eius dolor quas enim
                             </p>
                             <div class="client-name">Mark Queen</div>
-                            <div class="client-name">★★★☆☆</div>
+                            <div class="client-name stars">★★★☆☆</div>
                         </div>
                     </div>
 
@@ -141,6 +145,7 @@
         </section>
 
         <footer>
+            <div class="indice-menu" id="About"></div>
             <div class="titulo-footer">Connect with Maldito Black</div>
             <div class="redes">
                 <a href="" class="redes-cuadro"><span class="icon-whatsapp"></span></a>
@@ -156,6 +161,34 @@
     </div>
 
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 450, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
     <script src="js/js.js"></script>
 </body>
 
