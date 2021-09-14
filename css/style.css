@@ -94,7 +94,7 @@
     color: rgb(255, 255, 255);
     font-size: 18px;
     text-decoration: none;
-    padding: 8px;
+    padding: 10px;
     border-radius: 20px;
 }
 
@@ -188,7 +188,7 @@
 
 .presentacion .titulo {
     display: block;
-    width: 100%;
+    width: 88%;
     position: absolute;
     left: 50%;
     top: 30%;
@@ -264,6 +264,7 @@
 
 .contenedor-foto {
     display: block;
+    position: relative;
     width: 100%;
     margin: 0 auto;
     height: 550px;
@@ -271,13 +272,13 @@
     margin-bottom: 40px;
 }
 
-.contenedor-foto::before {
-    content: "";
+.contenedor-foto .before {
     display: block;
     position: absolute;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.820);
+    transition: all .5s;
 }
 
 .contenedor-foto .img-fondo {
@@ -289,12 +290,19 @@
 
 .contenedor-foto .clientes {
     display: block;
-    overflow: visible;
+}
+
+.contenedor-foto .cliente {
+    display: block;
+    position: relative;
+    width: 80%;
+    margin-bottom: 160px;
 }
 
 .contenedor-foto .opinion {
     display: block;
     position: absolute;
+    overflow: hidden;
     width: 100%;
     height: 400px;
     max-width: 750px;
@@ -354,7 +362,7 @@
     color: #fff;
 }
 
-.contenedor-foto .opinion .flechas {
+.contenedor-foto .flechas {
     display: inline-block;
     position: relative;
     place-content: center;
@@ -368,15 +376,22 @@
     cursor: pointer;
 }
 
-.contenedor-foto .opinion .flechas:hover {
+.contenedor-foto .div-flechas {
+    display: block;
+    position: absolute;
+    top: 350px;
+    left: 20px;
+}
+
+.contenedor-foto .flechas:hover {
     background: rgb(56, 136, 255);
 }
 
-.contenedor-foto .opinion .flechas:hover span {
+.contenedor-foto .flechas:hover span {
     color: #333;
 }
 
-.contenedor-foto .opinion .flechas span {
+.contenedor-foto .flechas span {
     display: block;
     position: absolute;
     left: 50%;
