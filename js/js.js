@@ -6,7 +6,7 @@
     const opinion = document.getElementById("opinion");
     const before = document.getElementById("before");
     const clientes = document.getElementById("clientes");
-    let array = document.getElementsByClassName("cliente-templates");
+    let array = document.querySelector(".nada").content.querySelectorAll(".cliente-templates");
 
     let indiceMenu = 0;
     menu.addEventListener("click", () => {
