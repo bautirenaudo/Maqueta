@@ -39,6 +39,16 @@
     top: -120px;
 }
 
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-hover);
+    border-radius: 50px;
+}
+
 /*HEADER*/
 
 .capa {
@@ -57,15 +67,15 @@
     position: fixed;
     right: 0;
     top: 0;
-    background-color: var(--color);
-    box-shadow: 0 0 5px 2px black;
+    box-shadow: none;
     border-radius: 0 0 10px 50px;
     z-index: 500;
+    transition: all .3s;
 }
 
 .header1 .logo {
     display: block;
-    width: 70px;
+    width: 85px;
     position: absolute;
     left: 30px;
     top: 50%;
@@ -108,20 +118,10 @@
     height: 100px;
     position: fixed;
     top: 0;
-    background-color: var(--color);
-    box-shadow: 0 0 5px 2px black;
+    box-shadow: none;
     border-radius: 0 0 10px 50px;
     z-index: 500;
-}
-
-.header2 .logo {
-    display: block;
-    width: 70px;
-    position: absolute;
-    left: 50px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
+    transition: all .3s;
 }
 
 .header2 .menu {
@@ -173,7 +173,7 @@
     width: 99.5%;
     height: 650px;
     position: relative;
-    transform: translateY(4px);
+    transform: translateY(3px);
     overflow: hidden;
 }
 
@@ -356,10 +356,15 @@
     font-size: 19px;
     color: rgb(87, 165, 238);
     font-weight: bold;
+    transition: all .3s;
 }
 
-.contenedor-foto .opinion .stars:hover {
-    color: #fff;
+.contenedor-foto .opinion .stars span {
+    color: rgb(87, 165, 238);
+}
+
+.contenedor-foto .opinion .stars:hover span {
+    color: rgb(255, 255, 255);
 }
 
 .contenedor-foto .flechas {
@@ -436,7 +441,7 @@
     display: block;
     position: relative;
     margin: 0 auto;
-    width: 250px;
+    width: 240px;
     height: 350px;
     border-radius: 10px;
     overflow: hidden;
@@ -531,6 +536,12 @@ footer .redes-cuadro {
     font-size: 13px;
     border: 1px solid rgb(51, 51, 51);
     text-decoration: none;
+    transition: all .25s;
+    border-bottom: 1px solid #fff;
+}
+
+footer .redes-cuadro:hover {
+    border-bottom: 10px solid #fff;
 }
 
 footer .redes-cuadro span {}
@@ -556,6 +567,9 @@ footer p {
 }
 
 @media screen and (max-width:730px) {
+    body::-webkit-scrollbar {
+        display: none;
+    }
     .header1 {
         display: none;
     }
