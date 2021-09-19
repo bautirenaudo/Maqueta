@@ -1,4 +1,5 @@
 (function () {
+
     const menu = document.getElementById("menu");
     const ul = document.getElementById("ul");
     const opinionNext = document.getElementById("next");
@@ -8,7 +9,7 @@
     const clientes = document.getElementById("clientes");
     let array = document.querySelector(".nada").content.querySelectorAll(".cliente-templates");
     const headers = document.querySelectorAll("header");
-    const productos = document.querySelectorAll(".productos");
+    const productos = document.querySelector(".productos");
 
     //MENU
     let indiceMenu = 0;
@@ -89,18 +90,17 @@
 
     //MOSTAR ELEMNTOS
     const mostarElementos = () => {
-        let currentScroll = window.scrollY;
-        if (currentScroll > 900) {
-            productos.forEach(producto => {
-                producto.style.opacity = "1";
-                producto.style.cssText = "transition: all .5s;";
-            })
-        } else if (currentScroll < 400) {
-            productos.forEach(producto => {
-                producto.style.opacity = "0";
-            })
+        let currentScroll = document.documentElement.scrollTop;
+        let productosScroll = productos.offsetTop;
+        if (currentScroll > productosScroll) {
+            productos.style.opacity = "1";
+            productos.style.cssText = "transition: all 1s;";
+        } else if (currentScroll < productosScroll) {
+            productos.style.opacity = "0";
         }
-
+        console.log(currentScroll);
+        console.log(productosScroll);
+        console.log(document.getElementById("Products").offsetTop)
     }
 
     window.addEventListener("scroll", () => {

@@ -106,6 +106,7 @@ body::-webkit-scrollbar-thumb {
     text-decoration: none;
     padding: 10px;
     border-radius: 20px;
+    transition: all .1s;
 }
 
 .header1 ul a:hover {
@@ -149,6 +150,7 @@ body::-webkit-scrollbar-thumb {
 
 .header2 ul li {
     display: grid;
+    position: relative;
     place-content: center;
     margin-bottom: 30px;
 }
@@ -161,8 +163,23 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 
-.header2 ul a:hover {
-    background: var(--color-hover);
+.header2 ul a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 40px;
+    background: linear-gradient(var(--color-hover)0%, #fff 600%);
+    z-index: -1;
+    border-radius: 20px;
+    transition: all .3s;
+}
+
+.header2 ul a:hover::before {
+    width: 100px;
 }
 
 /*SECTION*/
@@ -446,6 +463,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    opacity: 1;
 }
 
 .productos .producto:hover img {
