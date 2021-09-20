@@ -91,16 +91,14 @@
     //MOSTAR ELEMNTOS
     const mostarElementos = () => {
         let currentScroll = document.documentElement.scrollTop;
-        let productosScroll = productos.offsetTop;
-        if (currentScroll > productosScroll) {
+        let coords = productos.getBoundingClientRect();
+        if (currentScroll > coords.top + 200) {
             productos.style.opacity = "1";
             productos.style.cssText = "transition: all 1s;";
-        } else if (currentScroll < productosScroll) {
+        } else if (currentScroll < coords.top) {
             productos.style.opacity = "0";
         }
-        console.log(currentScroll);
-        console.log(productosScroll);
-        console.log(document.getElementById("Products").offsetTop)
+
     }
 
     window.addEventListener("scroll", () => {
