@@ -92,12 +92,22 @@
     const mostarElementos = () => {
         let currentScroll = document.documentElement.scrollTop;
         let coords = productos.getBoundingClientRect();
-        if (currentScroll > coords.top + 200) {
-            productos.style.opacity = "1";
-            productos.style.cssText = "transition: all 1s;";
-        } else if (currentScroll < coords.top) {
-            productos.style.opacity = "0";
+        if (window.innerWidth > 500) {
+            if (currentScroll > coords.top + 200) {
+                productos.style.opacity = "1";
+                productos.style.cssText = "transition: all 1s;";
+            } else if (currentScroll < coords.top) {
+                productos.style.opacity = "0";
+            }
+        } else {
+            if (currentScroll > coords.top + 550) {
+                productos.style.opacity = "1";
+                productos.style.cssText = "transition: all 1s;";
+            } else if (currentScroll < coords.top) {
+                productos.style.opacity = "0";
+            }
         }
+
 
     }
 
