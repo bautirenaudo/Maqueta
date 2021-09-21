@@ -10,6 +10,8 @@
     let array = document.querySelector(".nada").content.querySelectorAll(".cliente-templates");
     const headers = document.querySelectorAll("header");
     const productos = document.querySelector(".productos");
+    const tituloProductosBefore = document.querySelector(".titulo-productos .after")
+    console.log(tituloProductosBefore);
 
     //MENU
     let indiceMenu = 0;
@@ -93,18 +95,22 @@
         let currentScroll = document.documentElement.scrollTop;
         let coords = productos.getBoundingClientRect();
         if (window.innerWidth > 500) {
-            if (currentScroll > coords.top + 200) {
+            if (currentScroll > coords.top + 150) {
                 productos.style.opacity = "1";
                 productos.style.cssText = "transition: all 1s;";
-            } else if (currentScroll < coords.top) {
+                tituloProductosBefore.style.display="block";
+            } else if (currentScroll < coords.top - 400) {
                 productos.style.opacity = "0";
+                tituloProductosBefore.style.display="none";
             }
         } else {
             if (currentScroll > coords.top + 550) {
                 productos.style.opacity = "1";
                 productos.style.cssText = "transition: all 1s;";
+                tituloProductosBefore.style.display="block";
             } else if (currentScroll < coords.top) {
                 productos.style.opacity = "0";
+                tituloProductosBefore.style.display="none";
             }
         }
 
@@ -115,4 +121,5 @@
         menuScroll();
         mostarElementos();
     })
+
 }())
