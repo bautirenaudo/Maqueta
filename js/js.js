@@ -1,5 +1,6 @@
 (function () {
 
+    const capaLoading = document.querySelector(".capa-loading");
     const menu = document.getElementById("menu");
     const ul = document.getElementById("ul");
     const opinionNext = document.getElementById("next");
@@ -11,7 +12,12 @@
     const headers = document.querySelectorAll("header");
     const productos = document.querySelector(".productos");
     const tituloProductosBefore = document.querySelector(".titulo-productos .after")
-    console.log(tituloProductosBefore);
+
+
+    //CAPA LOADING
+    /*window.addEventListener("DOMContentLoaded", () => {
+        capaLoading.style.cssText = "transition: all .5s; opacity: 0;";
+    })*/
 
     //MENU
     let indiceMenu = 0;
@@ -98,19 +104,19 @@
             if (currentScroll > coords.top + 150) {
                 productos.style.opacity = "1";
                 productos.style.cssText = "transition: all 1s;";
-                tituloProductosBefore.style.display="block";
+                tituloProductosBefore.style.display = "block";
             } else if (currentScroll < coords.top - 400) {
                 productos.style.opacity = "0";
-                tituloProductosBefore.style.display="none";
+                tituloProductosBefore.style.display = "none";
             }
         } else {
-            if (currentScroll > coords.top + 550) {
+            if (currentScroll > coords.top + 600) {
                 productos.style.opacity = "1";
                 productos.style.cssText = "transition: all 1s;";
-                tituloProductosBefore.style.display="block";
+                tituloProductosBefore.style.display = "block";
             } else if (currentScroll < coords.top) {
                 productos.style.opacity = "0";
-                tituloProductosBefore.style.display="none";
+                tituloProductosBefore.style.display = "none";
             }
         }
 
